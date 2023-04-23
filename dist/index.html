@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Invoice Tagcard</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<a class="block text-center print:hidden" href="https://zummon.page/" target="_blank">
+	Made by zummon
+</a>
+<div class="bg-white text-gray-900 px-3">
+	<div class="bg-gray-50 flex p-4 shadow-md">
+		<div class="pr-4">
+			<img class="" src="" alt="" width="" height="" />
+		</div>
+		<div class="flex-1 text-right">
+			<h2 class="border-b text-xl" contenteditable="true">Vendor Name</h2>
+			<p class="" contenteditable="true">Register</p>
+			<p class="" contenteditable="true">Address</p>
+		</div>
+	</div>
+
+	<div class="grid grid-cols-2 my-4">
+		<div class="">
+			<h1 class="text-3xl">Invoice</h1>
+			<p class="mt-2 mb-4">
+				<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm" contenteditable="true">60505252</span>
+				<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm" contenteditable="true">Oct 27, 2021</span>
+			</p>
+			<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">Bill to</span>
+			<h2 class="text-xl pl-3 mt-2" contenteditable="true">Client Name</h2>
+			<p class="pl-3" contenteditable="true">Register</p>
+			<p class="pl-3" contenteditable="true">Address</p>
+		</div>
+		<div class="">
+			<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">Due Date</span>
+			<p class="pl-3 mt-2 mb-4" contenteditable="true"></p>
+			<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">Payment</span>
+			<p class="pl-3 mt-2 mb-4" contenteditable="true"></p>
+			<div class="bg-gray-900 text-white text-right p-4 shadow-md">
+				<h2 class="border-b border-gray-700 text-2xl" contenteditable="true"></h2>
+				<p class="">Pay Amount</p>
+			</div>
+		</div>
+	</div>
+
+	<table class="w-full mb-4">
+		<thead class="">
+			<tr class="border-b">
+				<td class="p-1 w-px whitespace-nowrap">No</td>
+				<td class="p-1">Description</td>
+				<td class="p-1 w-px whitespace-nowrap">Price</td>
+				<td class="p-1 w-px whitespace-nowrap">Qty</td>
+				<td class="p-1 w-px whitespace-nowrap">Amount</td>
+			</tr>
+		</thead>
+		<tbody class="divide-y">
+			<tr class="odd:bg-gray-50">
+				<td class="p-1 text-center" contenteditable="true">1</td>
+				<td class="p-1" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+			</tr>
+			<tr class="odd:bg-gray-50">
+				<td class="p-1 text-center" contenteditable="true">2</td>
+				<td class="p-1" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+			</tr>
+			<tr class="odd:bg-gray-50">
+				<td class="p-1 text-center" contenteditable="true">3</td>
+				<td class="p-1" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+			</tr>
+			<tr class="odd:bg-gray-50">
+				<td class="p-1 text-center" contenteditable="true">4</td>
+				<td class="p-1" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+			</tr>
+			<tr class="odd:bg-gray-50">
+				<td class="p-1 text-center" contenteditable="true">5</td>
+				<td class="p-1" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+				<td class="p-1 text-right" contenteditable="true"></td>
+			</tr>
+		</tbody>
+		<tfoot class="text-right">
+			<tr class="">
+				<td class="text-left p-1" colspan="2" rowspan="3">
+					<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">Note</span>
+					<p class="pl-3 mt-2 mb-4" contenteditable="true"></p>
+				</td>
+				<td class="p-1 whitespace-nowrap" colspan="2">Subtotal</td>
+				<td class="p-1" contenteditable="true"></td>
+			</tr>
+			<tr class="">
+				<td class="p-1 whitespace-nowrap" colspan="2">
+					<span class="inline-block">Vat</span>
+					<span class=""> </span>
+					<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm" contenteditable="true">5%</span>
+				</td>
+				<td class="p-1" contenteditable="true"></td>
+			</tr>
+			<tr class="">
+				<td class="p-1 whitespace-nowrap" colspan="2">Adjust</td>
+				<td class="p-1" contenteditable="true"></td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<div class="grid grid-cols-2 gap-4">
+		<div class="bg-gray-50 p-4 shadow-md">
+			<h3 class="">Vendor Signature</h3>
+			<p class="border-b" contenteditable="true"></p>
+			<p class="" contenteditable="true"></p>
+		</div>
+		<div class="bg-gray-50 p-4 shadow-md">
+			<h3 class="">Client Signature</h3>
+			<p class="border-b" contenteditable="true"></p>
+			<p class="" contenteditable="true"></p>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
