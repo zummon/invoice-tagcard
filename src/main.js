@@ -3,6 +3,7 @@ import "./style.css";
 
 let data = {
   "": {
+    "": "English",
     "font-link":
       "https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap",
     "font-style": "font-family: 'Kaushan Script', cursive;",
@@ -68,6 +69,7 @@ let data = {
     },
   },
   th: {
+    "": "ภาษาไทย",
     "font-link":
       "https://fonts.googleapis.com/css2?family=Srisakdi:wght@700&display=swap",
     "font-style": "font-family: 'Srisakdi', cursive; font-weight: 700;",

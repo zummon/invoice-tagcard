@@ -13,7 +13,6 @@
 	  }
 	  return `${q.currency} ${number.toLocaleString(undefined, {
 	    minimumFractionDigits: 2,
-	    maximumFractionDigits: 2
 	  })}`;
 	};
 	const qty = number => {
@@ -21,7 +20,9 @@
 	  if (number === 0 || isNaN(number)) {
 	    return "";
 	  }
-	  return number;
+	  return number.toLocaleString(undefined, {
+	    minimumFractionDigits: 0,
+	  });
 	};
 	const rate = rate => {
 	  rate = Number(rate) * 100;
@@ -93,7 +94,7 @@
 		<button class="p-3 shadow-md {q.lang === lng ? "bg-gray-900 text-white" : "text-gray-900 bg-gray-50 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white"}" on:click={() => {
 			q.lang = lng
 		}}>
-			{lng =='th' ? 'ไทย' : 'Eng'}
+			{data[lng]['']}
 		</button>
 	{/each}
 	{#each Object.keys(data[q.lang].label) as dc, i (`doc-${i}`)}
