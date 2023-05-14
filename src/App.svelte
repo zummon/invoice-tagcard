@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from "svelte";
-
 	export let data;
 
 	let l = data[""].label[""];
@@ -177,16 +176,16 @@
 					<td class="p-1 text-center whitespace-nowrap" contenteditable="true">{i + 1}</td>
 					<td class="p-1" contenteditable="true" bind:textContent={q.itemDesc[i]}></td>
 					<td class="p-1 text-right whitespace-nowrap" contenteditable="true" 
-						on:focus={(e) => e.target.textContent = q.itemPrice[i]}
-						on:input={(e) => q.itemPrice[i] = e.target.textContent}
-						on:blur={(e) => e.target.textContent = price(q.itemPrice[i])}
+						on:focus={(e) => {e.target.textContent = q.itemPrice[i]}}
+						on:input={(e) => {q.itemPrice[i] = e.target.textContent}}
+						on:blur={(e) => {e.target.textContent = price(q.itemPrice[i])}}
 					>
 						{price(q.itemPrice[i])}
 					</td>
 					<td class="p-1 text-right whitespace-nowrap" contenteditable="true" 
-						on:focus={(e) => e.target.textContent = q.itemQty[i]}
-						on:input={(e) => q.itemQty[i] = e.target.textContent}
-						on:blur={(e) => e.target.textContent = qty(q.itemQty[i])}
+						on:focus={(e) => {e.target.textContent = q.itemQty[i]}}
+						on:input={(e) => {q.itemQty[i] = e.target.textContent}}
+						on:blur={(e) => {e.target.textContent = qty(q.itemQty[i])}}
 					>
 						{qty(q.itemQty[i])}
 					</td>
@@ -213,9 +212,9 @@
 					<span class=""> </span>
 					<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">
 						<span class="" contenteditable="true" 
-							on:focus={(e) => e.target.textContent = q.vatRate}
-							on:input={(e) => q.vatRate = e.target.textContent}
-							on:blur={(e) => e.target.textContent = rate(q.vatRate)}
+							on:focus={(e) => {e.target.textContent = q.vatRate}}
+							on:input={(e) => {q.vatRate = e.target.textContent}}
+							on:blur={(e) => {e.target.textContent = rate(q.vatRate)}}
 						>
 							{rate(q.vatRate)}
 						</span>
@@ -232,9 +231,9 @@
 						<span class=""> </span>
 						<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">
 							<span class="" contenteditable="true" 
-								on:focus={(e) => e.target.textContent = q.whtRate}
-								on:input={(e) => q.whtRate = e.target.textContent}
-								on:blur={(e) => e.target.textContent = rate(q.whtRate)}
+								on:focus={(e) => {e.target.textContent = q.whtRate}}
+								on:input={(e) => {q.whtRate = e.target.textContent}}
+								on:blur={(e) => {e.target.textContent = rate(q.whtRate)}}
 							>
 								{rate(q.whtRate)}
 							</span>
@@ -248,9 +247,9 @@
 			<tr class="">
 				<td class="p-1 whitespace-nowrap" colspan="2">{l.totalAdjust}</td>
 				<td class="p-1 whitespace-nowrap" contenteditable="true" 
-					on:focus={(e) => e.target.textContent = q.totalAdjust}
-					on:input={(e) => q.totalAdjust = e.target.textContent}
-					on:blur={(e) => e.target.textContent = price(q.totalAdjust)}
+					on:focus={(e) => {e.target.textContent = q.totalAdjust}}
+					on:input={(e) => {q.totalAdjust = e.target.textContent}}
+					on:blur={(e) => {e.target.textContent = price(q.totalAdjust)}}
 				>
 					{price(q.totalAdjust)}
 				</td>
@@ -271,8 +270,12 @@
 	</div>
 </div>
 
-<div class="flex flex-wrap justify-center items-center my-4 print:hidden">
-	<button class="p-3 shadow-md text-white bg-gray-900" on:click={() => window.print()}>
+<div class="flex flex-wrap justify-center items-center my-4 print:hidden gap-4">
+	<label class="">
+		<span class="">Currency</span>
+		<input class="border border-gray-900 w-12" bind:value={q.currency} />
+	</label>
+	<button class="p-3 shadow-md text-white bg-gray-900" on:click={() => {window.print()}}>
 		Print
 	</button>
 </div>
