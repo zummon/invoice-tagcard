@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from "svelte";
 	export let data;
-
 	let l = data[""].label[""];
 	let q = data[""].q;
 
+	let saveink = false
 	const price = number => {
 	  number = Number(number);
 	  if (number === 0 || isNaN(number)) {
@@ -135,9 +135,10 @@
 			{/if}
 			<span class="inline-block rounded-3xl bg-gray-900 text-white py-0.5 px-2 text-sm">{l.paymethod}</span>
 			<p class="pl-3 mt-2 mb-4" contenteditable="true" bind:textContent={q.paymethod}></p>
-			<div class="bg-gray-900 text-white text-right p-4 shadow-md">
+			<div class="text-right p-4 shadow-md {saveink ? '' : 'bg-gray-900 text-white'}">
 				<h2 class="border-b border-gray-700 text-2xl">
-					{price(q.totalFinal)}
+					<span class="opacity-0">&check;</span>
+					<span>{price(q.totalFinal)}</span>
 				</h2>
 				<p class="">{l.totalFinal}</p>
 			</div>
@@ -278,4 +279,8 @@
 	<button class="p-3 shadow-md text-white bg-gray-900" on:click={() => {window.print()}}>
 		Print
 	</button>
+	<label class="">
+		<span class="">Save ink</span>
+		<input class="accent-gray-900" type="checkbox" bind:checked={saveink} />
+	</label>
 </div>
