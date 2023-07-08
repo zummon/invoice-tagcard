@@ -1,1 +1,3 @@
-[Made by zummon](https://zummon.page/)
+[Codesandbox](https://codesandbox.io/p/github/zummon/invoice-tagcard-svelte)
+
+Something breaks, needs upgrade. Let me know.
